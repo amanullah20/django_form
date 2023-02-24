@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {{std}}
+
+    {% if std %}
+    <table border="2px">
+
+        <tr>
+             <th>id</th>
+             <th>student_name</th>
+             <th>student_email</th>
+             <th>batch</th>
+             <th>course</th>
+
+        </tr>
+
+        {% for s in std %}
+
+        <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.student_name}}</td>
+            <td>{{s.student_email}}</td>
+            <td>{{s.batch}}</td>
+            <td>{{s.course}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>empty data </h1>
+    {% endif %} 
+
+</body>
+</html>
